@@ -1,0 +1,18 @@
+---
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: ubuntu-16.04
+    driver:
+      name: vagrant
+      box: ubuntu/xenial64
+      box_url: https://atlas.hashicorp.com/ubuntu/xenial64
+
+suites:
+  - name: default
+    run_list: 
+    attributes:
+      citadel:
+        access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
+        secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
