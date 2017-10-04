@@ -1,0 +1,7 @@
+DEPENDENCIES
+  mytestserver
+    path: .
+    metadata: true
+
+GRAPH
+  mytestserver (0.1.0)
